@@ -1,5 +1,5 @@
-with open("model3.yaml", "w") as f:
-  f.write("""# model3.yaml
+with open("model2.yaml", "w") as f:
+  f.write("""# model2.yaml
 
 ## Where the samples will be written
 save_data: dati/run/example
