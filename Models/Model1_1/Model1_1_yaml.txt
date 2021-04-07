@@ -43,9 +43,6 @@ dec_layers: 2
 position_encoding: True
 rnn_type: LSTM
 
-#both_embeddings: /content/glove_dir/glove.6B.300d.txt
-#embeddings_type: "GloVe"
-#word_vec_size: 500
 
 optim: adam
 learning_rate: 0.001
