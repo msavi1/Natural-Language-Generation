@@ -1,5 +1,5 @@
-with open("model3_1.yaml", "w") as f:
-  f.write("""# model3_1.yaml
+with open("model2_1.yaml", "w") as f:
+  f.write("""# model2_1.yaml
 
 ## Where the samples will be written
 save_data: dati/run/example
@@ -42,10 +42,6 @@ dec_rnn_size: 512
 dec_layers: 2
 position_encoding: True
 rnn_type: LSTM
-
-#both_embeddings: /content/glove_dir/glove.6B.300d.txt
-#embeddings_type: "GloVe"
-#word_vec_size: 500
 
 optim: adam
 learning_rate: 0.001
