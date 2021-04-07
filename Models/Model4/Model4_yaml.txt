@@ -1,0 +1,52 @@
+with open("model6.yaml", "w") as f:
+  f.write("""# model6.yaml
+
+## Where the samples will be written
+save_data: dati/run/example
+## Where the voca/content/WebNLG2017_train_RDF.txtb(s) will be written
+src_vocab: dati/run/example.vocab.src
+tgt_vocab: dati/run/example.vocab.tgt
+# Prevent overwriting existing files in the folder
+overwrite: False
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: /content/Train_RDF_all.txt
+        path_tgt: /content/Train_TEXT_all.txt
+    valid:
+        path_src: /content/Dev_RDF_all.txt
+        path_tgt: /content/Dev_TEXT_all.txt
+
+# Vocabulary files that were just created
+src_vocab: dati/run/example.vocab.src
+tgt_vocab: dati/run/example.vocab.tgt
+
+# Train on a single GPU
+world_size: 1
+gpu_ranks: [0]
+
+# Where to save the checkpoints
+save_model: dati/run/model
+save_checkpoint_steps: 10000
+valid_steps: 10000
+train_steps: 100000
+
+
+# Model
+encoder_type: rnn
+enc_rnn_size: 512
+enc_layers: 2
+decoder_type: rnn
+dec_rnn_size: 512
+dec_layers: 2
+position_encoding: True
+rnn_type: GRU
+
+optim: sgd
+learning_rate: 1
+dropout: 0.7
+
+
+seed: 321
+""")
